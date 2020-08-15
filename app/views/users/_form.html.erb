@@ -1,0 +1,33 @@
+<%= form_for @user, method: :post, url: users_path do |f|  %> 
+
+  <% if @user.errors.any? %> 
+
+    <% @user.errors.full_messages.each do |error| %> 
+
+      <div> <%= error%> <br> <br> </div>
+
+    <%end%>
+
+  <%end%>
+
+<%= f.label :username%>
+<%= f.text_field :username,value: 'John', required: true %><br><br>
+
+<%= f.label :email %>
+<%= f.text_field :email ,placeholder: 'example@example.com', required: true %><br><br>
+
+<%= f.label :password %>
+<%= f.password_field :password, required: true %><br><br>
+
+<%= f.submit 'Create'%>
+
+<%end%>
+
+
+
+
+
+
+
+
+

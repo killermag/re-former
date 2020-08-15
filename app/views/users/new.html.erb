@@ -1,0 +1,57 @@
+<!--
+<h1 id="heading">Create a new User</h1>
+
+<form action="/users" method="post" accept-charset="UTF-8" >
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label for="username">Username</label>
+  <input type="text" name="user[username]" id="name" ><br><br>
+
+  <label for="password">Password</label>
+  <input name="user[password]" type="password" id="pass"><br><br>
+
+  <label for="email">Email</label>
+  <input name="user[email]" id="email" type="email"> <br><br>
+
+  <input type="Submit">
+</form>
+
+--> 
+
+
+<!-- RUUUUUUUUUUBY WAAAAAAAAAAAAAY ON RAAAAAILS -->
+
+<!-- *_tag -->
+
+<!--
+
+<h1 id="heading">Create a new User</h1>
+
+<%= form_tag("/users", method: :post, multipart: true) do %>
+
+
+  <%= label_tag(:username,"Username") %>
+  <%= text_field_tag(:username) %><br><br>
+
+  <%= label_tag(:password,"password") %>
+  <%= text_field_tag(:password) %><br><br>
+
+  <%= label_tag(:email,"email") %>
+  <%= text_field_tag(:email) %><br><br>
+
+  
+  <%= submit_tag("Create") %> 
+<%end%> 
+
+--> 
+
+<%= render 'form' %> 
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+<%= link_to 'Create user', new_user_path %>
+
+<h1>All the registered users </h1>
+
+<% @users.each do |user| %> 
+  
+  <p>
+    Username: <%=user.username%>
+    Passowrd: <% user.password%> 
+    Email: <%=  user.email%>
+    <%= link_to 'Edit user', edit_user_path(user.id)  %>
+    
+  </p>
+
+<%end%> 
+
